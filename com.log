@@ -1,0 +1,13 @@
+{
+  title: '角色',   //表格标题（必填）
+  dataIndex: 'character',  //数据所对应的key（必填）
+  key: 'character', //数据所对应的key（可省略）
+  thead:true, // 是否显示该表头（必填）
+  editType:"RADIO", // 该数据所对应的修改形式（必填,不填默认不显示在修改的模态框中）
+  monitoringFun:function(){}, // 修改数据时的监听器，可用于控制其他组件的状态（可省略）
+  editAction:{  // 用于渲染修改数据时的选项（当修改形式需要选项时必填，其他可不填）
+    mode:"FUN", // 选项渲染形式（ARR以数组渲染，FUN以函数渲染）
+    specific:function(character){} // 选项渲染具体动作（mode为ARR时此处填写[{key:"",value:""}]形式的选项数组,FUN时则填写自定义的渲染函数）
+  },
+  renderAction:function(text, record, index, dataSource){}  //总表的渲染函数（可省略）
+}
